@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: math-tutor
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: math-tutor
+  template:
+    metadata:
+      labels:
+        app: math-tutor
+    spec:
+      containers:
+        - name: math-tutor
+          image: nivan283/math-tutor-app:latest
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              cpu: 100m
+            limits:
+              cpu: 200m
+          env:
+            - name: OLLAMA_API
+              valueFrom:
+                configMapKeyRef:
+                  name: tutor-config
+                  key: ollama-url

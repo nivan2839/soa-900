@@ -1,0 +1,13 @@
+kubectl apply -f configmap.yaml
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl apply -f hpa.yaml
+kubectl apply -f test-client.yaml
+kubectl apply -f stresspod.yaml
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+
+helm install monitoring prometheus-community/kube-prometheus-stack
+kubectl get pods
+kubectl port-forward svc/monitoring-grafana 3001:80
+admin / prom-operator

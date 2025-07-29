@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stresspod-trigger
+spec:
+  containers:
+    - name: stress
+      image: polinux/stress
+      command: ["stress"]
+      args: ["--cpu", "2", "--timeout", "300s"]  # 2 CPUs for 5 minutes
