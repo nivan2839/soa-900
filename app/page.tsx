@@ -1,7 +1,8 @@
 'use client';
+export const dynamic = 'force-dynamic';
 import { useState } from 'react';
 
-export default function Home() {
+const Home = () => {
   const [grade, setGrade] = useState('');
   const [topic, setTopic] = useState('');
   const [questions, setQuestions] = useState<string[]>([]);
@@ -65,3 +66,4 @@ export default function Home() {
     </div>
   );
 }
+export default Home;

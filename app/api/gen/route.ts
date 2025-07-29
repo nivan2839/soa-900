@@ -17,11 +17,11 @@ export async function POST(req: NextRequest) {
   const prompt = `Generate 10 ${topic} math questions for Grade ${grade}. Only provide the questions. Do NOT include answers.`;
 
   try {
-    const response = await fetch('http://172.25.176.1:1234/v1/completions', {
+    const response = await fetch('http://127.0.0.1:1234/v1/completions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'mistralai/mistral-7b-instruct-v0.3',
+        model: 'mistralai/mathstral-7b-v0.1',
         prompt: prompt,
         stream: false,
       }),

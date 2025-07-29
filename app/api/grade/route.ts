@@ -10,21 +10,22 @@ Return an array of answers. No addtional text.
 ${questions}
   `;
   try {
-   const response = await fetch('http://172.25.176.1:1234/v1/completions', {
+   const response = await fetch('http://127.0.0.1:1234/v1/completions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'mistralai/mistral-7b-instruct-v0.3',
+        model: 'mistralai/mathstral-7b-v0.1',
         prompt: formattedPrompt,
         stream: false,
       }),
     });
   const data = await response.json();
+  console.log(data)
   // Extract just the answers (basic parsing)
   const answersFromAPI = JSON.parse(data.choices[0].text)
   let score = 0
     answersFromAPI.map((answersFro: number, i:number) =>{
-      if(answersFro.toString() === answers[i]){
+      if(answersFro.toString().trim() === answers[i].trim()){
         score = score + 1
       }
     })
