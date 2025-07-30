@@ -10,7 +10,7 @@ Return an array of answers. No addtional text.
 ${questions}
   `;
   try {
-   const response = await fetch('http://127.0.0.1:1234/v1/completions', {
+   const response = await fetch('http://host.docker.internal:1234/v1/completions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
