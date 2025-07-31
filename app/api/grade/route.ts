@@ -1,7 +1,6 @@
 // app/api/grade/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-
 export async function POST(req: NextRequest) {
   const { studentName, answers, professorEmail, questions } = await req.json();
     const formattedPrompt = `
@@ -14,7 +13,7 @@ ${questions}
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'mistralai/mathstral-7b-v0.1',
+        model: 'mistralai/mistral-7b-instruct-v0.3',
         prompt: formattedPrompt,
         stream: false,
       }),

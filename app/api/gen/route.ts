@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'mistralai/mathstral-7b-v0.1',
+        model: 'mistralai/mistral-7b-instruct-v0.3',
         prompt: prompt,
         stream: false,
       }),
