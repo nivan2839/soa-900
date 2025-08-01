@@ -26,9 +26,11 @@ jobs:
       - name: Run tests
         run: npm run test
       
+      - name: Install playwright tests dependencies
+        run: npx playwright install
+      
       - name: Run playwright tests
-        run:
-          npx playwright install   
-          npm run e2e
+        run: npm run e2e
+
       
       
