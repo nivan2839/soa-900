@@ -46,7 +46,7 @@ const Home = () => {
       {questions.map((q, i) => (
         <div key={i}>
           <p>{q}</p>
-          <input value={answers[i] || ''} onChange={e => {
+          <input placeholder ="answer" value={answers[i] || ''} onChange={e => {
             const newA = [...answers];
             newA[i] = e.target.value;
             setAnswers(newA);
