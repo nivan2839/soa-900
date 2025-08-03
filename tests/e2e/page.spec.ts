@@ -39,7 +39,6 @@ test('intercepts /api/gen and mocks questions', async ({ page }) => {
 
   // Optional: Fill answers and submit
   const inputs = await page.$$('input[placeholder="answer"]');
-  console.log(inputs)
   for (let i = 0; i < 10; i++) {
     await inputs[i].fill('42');
   }

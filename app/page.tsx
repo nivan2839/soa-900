@@ -1,6 +1,7 @@
 'use client';
 export const dynamic = 'force-dynamic';
 import { useState } from 'react';
+import html2canvas from 'html2canvas';
 
 const Home = () => {
   const [grade, setGrade] = useState('');
@@ -23,13 +24,18 @@ const Home = () => {
   };
 
   const submit = async () => {
+      const element = document.body; // or a specific div
+  const canvas = await html2canvas(element);
+  const screenshotBase64 = canvas.toDataURL('image/png'); // Base64 string
+
     const res = await fetch('/api/grade', {
       method: 'POST',
       body: JSON.stringify({
         questions: questions,
         studentName: student,
         answers,
-        professorEmail: email
+        professorEmail: email,
+              screenshot: screenshotBase64,
       }),
       headers: { 'Content-Type': 'application/json' },
     });

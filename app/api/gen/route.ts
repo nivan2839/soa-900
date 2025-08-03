@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   const prompt = `Generate 10 ${topic} math questions for Grade ${grade}. Only provide the questions. Do NOT include answers.`;
 
   try {
-    const response = await fetch('http://host.docker.internal:1234/v1/completions', {
+    const response = await fetch('http://localhost:1234/v1/completions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
