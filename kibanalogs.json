@@ -1,0 +1,215 @@
+[
+  {
+    "@timestamp": "2025-08-07T14:10:00.000Z",
+    "log.level": "INFO",
+    "message": "User diana performed generate_report",
+    "service.name": "report-service",
+    "event": {
+      "dataset": "report-service.logs"
+    },
+    "host": {
+      "name": "report-app-web"
+    },
+    "agent": {
+      "type": "filebeat",
+      "version": "8.13.4"
+    },
+    "user": {
+      "id": "1020",
+      "name": "user20"
+    },
+    "http": {
+      "request": {
+        "method": "GET"
+      },
+      "response": {
+        "status_code": 200
+      }
+    },
+    "url": {
+      "path": "/api/gen"
+    },
+    "labels": {
+      "reportType": "summary"
+    },
+    "status": "completed"
+  },
+  {
+    "@timestamp": "2025-08-07T14:11:00.000Z",
+    "log.level": "INFO",
+    "message": "User diana performed generate_report",
+    "service.name": "report-service",
+    "event": {
+      "dataset": "report-service.logs"
+    },
+    "host": {
+      "name": "report-app-web"
+    },
+    "agent": {
+      "type": "filebeat",
+      "version": "8.13.4"
+    },
+    "user": {
+      "id": "1021",
+      "name": "user21"
+    },
+    "http": {
+      "request": {
+        "method": "GET"
+      },
+      "response": {
+        "status_code": 200
+      }
+    },
+    "url": {
+      "path": "/api/gen"
+    },
+    "labels": {
+      "reportType": "summary"
+    },
+    "status": "completed"
+  },
+  {
+    "@timestamp": "2025-08-07T14:12:00.000Z",
+    "log.level": "INFO",
+    "message": "User diana performed generate_report",
+    "service.name": "report-service",
+    "event": {
+      "dataset": "report-service.logs"
+    },
+    "host": {
+      "name": "report-app-web"
+    },
+    "agent": {
+      "type": "filebeat",
+      "version": "8.13.4"
+    },
+    "user": {
+      "id": "1022",
+      "name": "user22"
+    },
+    "http": {
+      "request": {
+        "method": "GET"
+      },
+      "response": {
+        "status_code": 200
+      }
+    },
+    "url": {
+      "path": "/api/gen"
+    },
+    "labels": {
+      "reportType": "summary"
+    },
+    "status": "completed"
+  },
+  {
+    "@timestamp": "2025-08-07T14:10:00.000Z",
+    "log.level": "INFO",
+    "message": "User eve performed grade_submission",
+    "service.name": "grading-service",
+    "event": {
+      "dataset": "grading-service.logs"
+    },
+    "host": {
+      "name": "grade-app-web"
+    },
+    "agent": {
+      "type": "filebeat",
+      "version": "8.13.4"
+    },
+    "user": {
+      "id": "1030",
+      "name": "user30"
+    },
+    "http": {
+      "request": {
+        "method": "POST"
+      },
+      "response": {
+        "status_code": 200
+      }
+    },
+    "url": {
+      "path": "/api/grade"
+    },
+    "labels": {
+      "grade": "9",
+      "topic": "History"
+    },
+    "score": 5
+  },
+  {
+    "@timestamp": "2025-08-07T14:11:00.000Z",
+    "log.level": "INFO",
+    "message": "User eve performed grade_submission",
+    "service.name": "grading-service",
+    "event": {
+      "dataset": "grading-service.logs"
+    },
+    "host": {
+      "name": "grade-app-web"
+    },
+    "agent": {
+      "type": "filebeat",
+      "version": "8.13.4"
+    },
+    "user": {
+      "id": "1031",
+      "name": "user31"
+    },
+    "http": {
+      "request": {
+        "method": "POST"
+      },
+      "response": {
+        "status_code": 200
+      }
+    },
+    "url": {
+      "path": "/api/grade"
+    },
+    "labels": {
+      "grade": "9",
+      "topic": "History"
+    },
+    "score": 6
+  },
+  {
+    "@timestamp": "2025-08-07T14:12:00.000Z",
+    "log.level": "INFO",
+    "message": "User eve performed grade_submission",
+    "service.name": "grading-service",
+    "event": {
+      "dataset": "grading-service.logs"
+    },
+    "host": {
+      "name": "grade-app-web"
+    },
+    "agent": {
+      "type": "filebeat",
+      "version": "8.13.4"
+    },
+    "user": {
+      "id": "1032",
+      "name": "user32"
+    },
+    "http": {
+      "request": {
+        "method": "POST"
+      },
+      "response": {
+        "status_code": 200
+      }
+    },
+    "url": {
+      "path": "/api/grade"
+    },
+    "labels": {
+      "grade": "9",
+      "topic": "History"
+    },
+    "score": 7
+  }
+]
