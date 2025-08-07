@@ -84,7 +84,6 @@ kubectl apply -f configmap.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl apply -f hpa.yaml
-kubectl apply -f test-client.yaml
 kubectl apply -f stresspod.yaml
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
