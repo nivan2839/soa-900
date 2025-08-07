@@ -32,8 +32,12 @@ A microservice-based Next.js application where students can:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-user/mathbot.git
-cd mathbot
+git clone https://github.com/nivan2839/soa-900
+cd soa-900
+
+Prerequisites:
+Download LM studio and get the model mistralai/mistral-7b-instruct-v0.3
+Go to developer section and start the server
 
 
 🧪 API Documentation
@@ -89,3 +93,4 @@ helm install monitoring prometheus-community/kube-prometheus-stack
 kubectl get pods
 kubectl port-forward svc/monitoring-grafana 3001:80
 npm run dev
+
